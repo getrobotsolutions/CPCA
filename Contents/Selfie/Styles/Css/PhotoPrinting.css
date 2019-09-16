@@ -108,6 +108,7 @@ canvas  {
 	width: 1080px;
 	margin-top: -453px;
 	position: absolute;
+	left: -50px;
     z-index: 101;
 }
 

@@ -171,7 +171,7 @@ var refreshIntervalId ;
 		document.getElementById('number').style.display = "none";
 		document.getElementById('frame').style.display = "none";
 		document.getElementById('number_img').src = "Image/3_re.png";
-		document.getElementById('delete').style.backgroundColor = "#0068B3";
+		document.getElementById('delete').style.backgroundColor = "#b11f2d";
         document.getElementById('delete').style.color = "white	";
         document.getElementById('delete').disabled = false;
 
