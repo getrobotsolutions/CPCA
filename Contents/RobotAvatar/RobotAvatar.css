@@ -25,8 +25,9 @@ body {
 
 .main{
 	background-color: #00acbb;
-    min-height: 1150px;
-	padding-top:0 40px;}
+    min-height: 1005px;
+	padding-top:0 40px;
+overflow: hidden;}
 
 .bg {
 	margin: 0;
@@ -109,8 +110,8 @@ body {
 	height: 66px;
 }
 footer {
-	position: absolute;
-	bottom: -8px !important;
+	/*position: absolute;
+	bottom: -8px !important;*/
     border-top: 20px solid  #f79226;
 }
 .titleAvatar{

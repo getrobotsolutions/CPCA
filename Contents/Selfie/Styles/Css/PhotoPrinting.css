@@ -2,7 +2,7 @@ html{height: 1600px;}
 body{
 	
 }
-#container{padding-top: 20px;q}
+#container{padding-top: 20px;}
 #container #contents {    margin:auto;width: 1000px;position: relative; height: 880px;border: 10px solid #e80028;background-color: white;}
 #container #contents .photo_btn {
 	position: absolute;
