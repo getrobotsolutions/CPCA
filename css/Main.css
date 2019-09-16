@@ -13,7 +13,7 @@
 }
 @font-face {
     font-family: GillSansStd;
-    src: url('Fonts/GillSansStd.otf');
+    src: url('Fonts/GILLSANS.ttf');
 }
 a{
 	color: white;
@@ -26,7 +26,7 @@ body{
 	width: 1080px;
 	height: 1920px;
 	overflow: hidden;
-	font-family: 'GillSansStd';
+	font-family: 'GillSansStd' !important;
 	color: #ffffff;
 	/*background-color: #004990 !important;
 	background-color: #004990;*/

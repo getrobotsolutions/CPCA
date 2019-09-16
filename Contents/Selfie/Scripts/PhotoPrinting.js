@@ -125,7 +125,7 @@ function CountDown()
                 srefreshIntervalId = null;
                 
                 window.external.PauseCamViewer();
-                window.external.PlaySpeech(speechJsonObj["frame"][c_language]);
+                //window.external.PlaySpeech(speechJsonObj["frame"][c_language]);
             }
             
             isPhotoTaken = true;
