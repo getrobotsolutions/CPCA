@@ -34,7 +34,7 @@ body{
 header
 {
 	width: 1080px;
-	height: 450px;
+	height: 415px;
 	/*background-color: #002c66;*/
 }
 nav{
@@ -47,7 +47,7 @@ header .logo {
 	padding: 0 20px;
 }
 header .logo img {
-	width: 990px;
+	width: 900px;
 }
 .main-content {
 	/*background-image: url("../assets/background.png");
