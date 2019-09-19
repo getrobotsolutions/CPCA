@@ -40,14 +40,11 @@ function FC_ContentsCall(strContentsName, strLanguage)
             //PlaySpeech(speak[2]);
             location.href = "../../Contents/Calibration/index.html";
             break;
-        case "Solutions":
+        case "MatchGame":
             //PlaySpeech(speak[2]);
-            location.href = "Contents/Solutions/index.html";
+            location.href = "Contents/MatchGame/index.html";
             break;
-        case "Pathwave":
-            //PlaySpeech(speak[1]);
-            location.href = "Contents/Pathwave/index.html";
-            break;
+        
         case "Dance":
             location.href = "Contents/Dance/index.html";
             PlaySpeech(speak[3]);
