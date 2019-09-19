@@ -16,6 +16,9 @@
     display: block;
     float: right;}
   }
+  header{
+    background-color: white;
+  }
   header .logo{
     background-image: url(../../../assets/logo.png);
     background-size: cover;

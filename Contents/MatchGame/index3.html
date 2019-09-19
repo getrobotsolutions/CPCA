@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta content="text/html" charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
 
     <script language="JavaScript" type="text/javascript" src="../../Scripts/BaseCommand.js"></script>
     <script language="JavaScript" type="text/javascript" src="../../Scripts/BaseEvent.js"></script>
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
   <link href="css/eat.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
 
 
 </head>
@@ -29,7 +30,7 @@
     <div class="logo" style="background-image: url(../../assets/logo.png);    height: 415px;
     background-size: 900px;
     background-repeat: no-repeat;
-    background-position: center;">
+    background-position: center;" onclick="FC_ContentsCall('Home')">
         <!--<img onclick="FC_ContentsCall('Home')" src="../../assets/logo.png">-->
     </div>
     
@@ -41,95 +42,77 @@
 </nav>
 
   <section class="main-content">
-    <div class="wrap" style="text-align: center;">
+        <div class="container">
+        <div>
+            <!--<h1>Memory Game</h1>-->
+        </div>
 
-      <div class="wrap">
-        <div id="matches"></div>
-          <button onclick="rel()" style="font-size: xx-large" > Reload </button>
+        <section class="score-panel">
+          <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+          </ul>
 
-          <table>
-              <tr>
-                  <td>
-                      <div id="img1" style="position: relative; top: 0; left: 0" onclick="image_one()">
-                          <a href="javascript:choose(0)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-                  <td>
-                      <div id="img2" style="position: relative; top: 0; left: 0" onclick="image_two()" >
-                          <a href="javascript:choose(1)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <div id="img3" style="position: relative; top: 0; left: 0" onclick="image_three()">
-                          <a href="javascript:choose(2)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-                  <td>
-                      <div id="img4" style="position: relative; top: 0; left: 0" onclick="image_four()">
-                          <a href="javascript:choose(3)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <div id="img5" style="position: relative; top: 0; left: 0" onclick="image_five()">
-                          <a href="javascript:choose(4)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-                  <td>
-                      <div id="img6" style="position: relative; top: 0; left: 0" onclick="image_six()">
-                          <a href="javascript:choose(5)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <div id="img7" style="position: relative; top: 0; left: 0" onclick="image_seven()">
-                          <a href="javascript:choose(6)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-                  <td>
-                      <div id="img8" style="position: relative; top: 0; left: 0" onclick="image_eight()">
-                          <a href="javascript:choose(7)"><img src="images/MS_MatchGame_Back.png" /></a>
-                      </div>
-                  </td>
-              </tr>
-          </table>
+          <span class="moves">0</span> Move(s)
 
+            <div class="timer">
+            </div>
 
-      </div>
-      
+            <div class="restart" onclick=startGame()>
+            <i class="fa fa-repeat"></i>
+          </div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="IMPACT">
+                <i><img class="front-face" src="images/1.png" alt="Aurelia" /></i>
+            </li>
+            <li class="card match" type="IMPACT">
+                <img class="front-face" src="images/1.png" alt="Aurelia" />
+            </li>
+            <li class="card" type="ACCESS">
+                <img class="front-face" src="images/2.png" alt="Aurelia" />
+            </li>
+            
+            <li class="card" type="INNOVATION" >
+               <img class="front-face" src="images/3.png" alt="Aurelia" />
+            </li>
+            <li class="card" type="INNOVATION">
+               <img class="front-face" src="images/3.png" alt="Aurelia" />
+            </li>
+            <li class="card match" type="ACCESS">
+                <img class="front-face" src="images/2.png" alt="Aurelia" />
+            </li>
+            <li class="card" type="VALUE">
+                <img class="front-face" src="images/4.png" alt="Aurelia" />
+            </li>
+            <li class="card" type="VALUE">
+                <img class="front-face" src="images/4.png" alt="Aurelia" />
+            </li>
+            
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations 🎉</h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Congratulations you're a winner 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again 😄</a>
+                </button>
+            </div>
+        </div>
+
     </div>
-  </section>
-<div class="wrap">
-<div class="game"></div>
-  
-  <div class="modal-overlay">
-    <div class="modal">
-      <h2 class="winner">You Rock!</h2>
-      <button class="restart">Play Again?</button>
-      <p class="message">Developed on <a href="https://codepen.io">CodePen</a> by <a href="https://codepen.io/natewiley">Nate Wiley</a></p>
-      <p class="share-text">Share it?</p>
-      <ul class="social">
-        <li><a target="_blank" class="twitter" href="https://twitter.com/share?url=https://codepen.io/natewiley/pen/HBrbL"><span class="fa fa-twitter"></span></a></li>
-        <li><a target="_blank" class="facebook" href="https://www.facebook.com/sharer.php?u=https://codepen.io/natewiley/pen/HBrbL"><span class="fa fa-facebook"></span></a></li>
-        <li><a target="_blank" class="google" href="https://plus.google.com/share?url=https://codepen.io/natewiley/pen/HBrbL"><span class="fa fa-google"></span></a></li>
-      </ul>
-    </div>
-  </div>
-  <footer>
-    <p class="disclaimer">All logos are property of their respective owners, No Copyright infringement intended.</p>
-  </footer>
-  </div><!-- End Wrap -->
-
-<div id="dialog-overlay"></div>
-<div id="dialog-box">
-</div>
-
-
-
+    <script type="" src="js/scripts.js"></script>
 
 <script language="JavaScript" type="text/javascript" src="js/eat.js"></script>
 <script language="JavaScript" type="text/javascript" src="../Common/Scripts/common-inner.js"></script>
@@ -141,70 +124,5 @@
 
 
 
-<script  src="js/index.js"></script>
-
-<script>
-    var clicks = 0; //counts how may picks have been made in each turn
-    var firstchoice; //stores index of first card selected
-    var secondchoice; //stores index of second card selected
-
-    var match = 0; //counts matches made
-    var backcard = "images/MS_MatchGame_Back.png"; //shows back of card when turned over
-
-    var faces = []; //array to store card images
-    faces[0] = 'one';
-    faces[1] = 'two';
-    faces[2] = 'three';
-    faces[3] = 'one';
-    faces[4] = 'four';
-    faces[5] = 'two';
-    faces[6] = 'four';
-    faces[7] = 'three';
-
-    var faces_p = []; //array to store card images
-    faces_p[0] = 'images/MS_MatchGame_ClinicalCare.png';
-    faces_p[1] = 'images/MS_MatchGame_ElectronicRemittance.png';
-    faces_p[2] = 'images/MS_MatchGame_FinancialManagement.png';
-    faces_p[3] = 'images/MS_MatchGame_GapsCareInsights.png';
-    faces_p[4] = 'images/MS_MatchGame_PaidClaimAnalytics.png';
-    faces_p[5] = 'images/MS_MatchGame_PatientEngagement.png';
-    faces_p[6] = 'images/MS_MatchGame_PopHealth.png';
-    faces_p[7] = 'images/MS_MatchGame_VirtualVisits.png';
-
-    function choose(card) {
-        if (clicks == 2) {
-            return;
-        }
-        if (clicks == 0) {
-            firstchoice = card;
-            document.images[card].src = faces_p[card];
-            clicks = 1;
-        } else {
-            clicks = 2;
-            secondchoice = card;
-            document.images[card].src = faces_p[card];
-            timer = setInterval("check()", 1000);
-        }
-    }
-    /* Check to see if a match is made */
-
-    function check() {
-        clearInterval(timer); //stop timer
-        clicks = 0;
-        if (faces[secondchoice] == faces[firstchoice]) {
-            match++;
-            document.getElementById("matches").innerHTML = match;
-        } else {
-            document.images[firstchoice].src = backcard;
-            document.images[secondchoice].src = backcard;
-            return;
-        }
-    }
-
-    function rel()
-    {location.reload();}
-</script>
-
 </body>
-
 </html>
