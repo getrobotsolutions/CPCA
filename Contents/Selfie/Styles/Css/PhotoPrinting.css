@@ -15,7 +15,7 @@ body{
 }
 #container #contents .photo_btn  li {float: left;}
 #container #contents .photo_frame {position: absolute; float: left;  margin-top: 165px;}
-#container #contents .photo_frame dd {float:left; margin-right: 12px;}
+#container #contents .photo_frame dd {float:left; margin-right: 20px;box-shadow: 1px 2px 54px black;background: white;}
 #container #contents .photo_frame dd img{width: 222px;}
 
 ul{list-style-type: none;}

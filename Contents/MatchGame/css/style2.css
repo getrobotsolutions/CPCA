@@ -100,7 +100,8 @@ header{
 .card .inside.picked .front, .card .inside.matched .front{
   display: block;
 }
-.card .inside.picked .back{
+
+.card .inside.picked .back, .card .inside.matched .back{
   display: none;
 }
 .card .front img, .card .back img {
