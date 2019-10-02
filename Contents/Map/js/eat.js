@@ -14,28 +14,6 @@ $(document).click(function(event) {
 //-----------------------------------------------------
 
 
-function LanguageChange(lang)
-{
-    if(lang === "english")
-    {
-        eraseCookie("Spanish");
-        writeCookie("CurrentLanguage", "English", 30);
-        document.getElementById("btn_english").style.backgroundColor = "white";
-        document.getElementById("btn_english").style.color = "#FF6600";
-        document.getElementById("btn_spanish").style.backgroundColor = "#FF6600";
-        document.getElementById("btn_spanish").style.color = "white";
-    }
-    else if (lang === "spanish")
-    {
-        eraseCookie("English");
-        writeCookie("CurrentLanguage", "Spanish", 30);
-        document.getElementById("btn_english").style.backgroundColor = "#FF6600";
-        document.getElementById("btn_english").style.color = "white";
-        document.getElementById("btn_spanish").style.backgroundColor = "white";
-        document.getElementById("btn_spanish").style.color = "#FF6600";
-    }
-location.reload();
-}
 
 
 

@@ -36,9 +36,9 @@ function FC_ContentsCall(strContentsName, strLanguage)
             location.href = "Contents/Schedule/index.html";
             PlaySpeech(speak[0]);
             break;
-        case "Calibration":
+        case "Map":
             //PlaySpeech(speak[2]);
-            location.href = "../../Contents/Calibration/index.html";
+            location.href = "Contents/Map/index.html";
             break;
         case "MatchGame":
             //PlaySpeech(speak[2]);
