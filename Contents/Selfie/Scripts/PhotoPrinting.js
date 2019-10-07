@@ -224,7 +224,7 @@ function SendEmail()
     var addr = message;
     var tempEmail=message;
     //var addr = "paul@robotaisolutions.com";
-    var subject = "Your robot selfie";
+    var subject = "Your Robot Picture";
     var body = "Thank you for attending the CPCA Annual Conference! Here is your photo from our robot.";
     //var mail_server = "smtp.gmail.com";
     //var mail_addr_sender = "ict.muscatairport@gmail.com";

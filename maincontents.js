@@ -12,8 +12,8 @@
 
         var speak = new Array( );
         speak[0] = "Check out our schedule of events";
-        speak[1] = "";
-        speak[2] = "";
+        speak[1] = "Here is a map of the event";
+        speak[2] = "see how fast you can match the pictures";
         speak[3] = "Pick a song and let's boogie.";
         speak[4] = "Become a robot.";
         speak[5] = "Take a picture with me.";
@@ -37,12 +37,14 @@ function FC_ContentsCall(strContentsName, strLanguage)
             PlaySpeech(speak[0]);
             break;
         case "Map":
-            //PlaySpeech(speak[2]);
+            
             location.href = "Contents/Map/index.html";
+            PlaySpeech(speak[1]);
             break;
         case "MatchGame":
-            //PlaySpeech(speak[2]);
+            
             location.href = "Contents/MatchGame/index.html";
+            PlaySpeech(speak[2]);
             break;
         
         case "Dance":
